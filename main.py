@@ -33,10 +33,8 @@ while True:
         char_list = [morse_dict[letter] for letter in message]
         encoded_message = " ".join(char_list)
         print(f"\nYour message in morse code:\n  {encoded_message}")
+    #     inform user of invalid character
     except KeyError as e:
-        # print("Morse code encoder can't translate the following character(s):")
-        # for arg in e.args:
-        #     print(arg)
         print(f"\nThe character '{e.args[0]}' is not an option for translating into Morse Code.\n")
     else:
         time.sleep(2)
